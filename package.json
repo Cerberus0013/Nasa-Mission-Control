@@ -1,0 +1,30 @@
+{
+  "name": "nasaproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix serverr",
+    "install-client": "npm install --prefix clientt",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix serverr",
+    "client": "npm start --prefix clientt",
+    "watch": "npm run server & npm run client",
+    "test": "run test --prefix serverr && npm run test --prefix clientt",
+    "deploy": "npm run build --prefix clientt && npm start --prefix serverr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cerberus0013/Nasa-Mission-Control.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cerberus0013/Nasa-Mission-Control/issues"
+  },
+  "homepage": "https://github.com/Cerberus0013/Nasa-Mission-Control#readme",
+  "dependencies": {
+    "morgan": "^1.10.0"
+  }
+}
