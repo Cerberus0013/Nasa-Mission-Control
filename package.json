@@ -11,7 +11,8 @@
     "client": "npm start --prefix clientt",
     "watch": "npm run server & npm run client",
     "test": "run test --prefix serverr && npm run test --prefix clientt",
-    "deploy": "npm run build --prefix clientt && npm start --prefix serverr"
+    "deploy": "npm run build --prefix clientt && npm start --prefix serverr",
+    "deploy-cluster": "npm run build --prefix clientt && npm run cluster --prefix serverr"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,10 @@
   },
   "homepage": "https://github.com/Cerberus0013/Nasa-Mission-Control#readme",
   "dependencies": {
+    "mongoose": "^6.2.4",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
